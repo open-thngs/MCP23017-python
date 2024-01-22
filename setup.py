@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mcp23017',
-    version='1.0.0',
+    version='1.0.1',
     description='MCP23017 Library',
     long_description=open("README.md", 'r').read(),
     long_description_content_type='text/markdown',
