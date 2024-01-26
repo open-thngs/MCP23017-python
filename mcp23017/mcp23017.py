@@ -1,3 +1,5 @@
+from . import i2c
+
 IODIRA   = 0x00  # Pin direction register
 IODIRB   = 0x01  # Pin direction register
 IPOLA    = 0x02
@@ -79,8 +81,8 @@ class MCP23017:
 
 	"""
 
-	def __init__(self, address, i2c):
-		self.i2c = i2c
+	def __init__(self, address, smbus):
+		self.i2c = i2c.I2C(smbus)
 		self.address = address
 
 	def set_all_output(self):
